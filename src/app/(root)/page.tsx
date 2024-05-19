@@ -2,19 +2,25 @@
 import React from 'react'
 import Image from 'next/image'
 import logo from '../../public/icons/logo.svg'
+import HeaderBox from '@/components/HeaderBox'
 
 type Props = {}
 
 const Home = (props: Props) => {
+  const loggedIn = {firstname:"Suzeet"}
   return (
-    <div>
-      <Image
-            src={logo}
-            width={500}
-            height={500}
-            alt="Picture of the author"
+    <section className='home'>
+      <div className="home-content">
+        <header className="home-header">
+          <HeaderBox
+            type='greeting'
+            title='Welcome'
+            user={loggedIn?.firstname || "Guest User"}
+            subtext="Access and manage your expenditures and transations"
           />
-          Home</div>
+        </header>
+      </div>
+    </section>
   )
 }
 
