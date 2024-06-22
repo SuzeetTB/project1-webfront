@@ -7,7 +7,10 @@ export default function RootLayout({
 }>) {
   return (
     <main className="flex h-screen w-full font-inter">        
-      SIDEBAR
+      
+      {/* SIDEBAR */}
+
+      
       {children}
     </main>
   );
